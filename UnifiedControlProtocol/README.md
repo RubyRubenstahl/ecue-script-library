@@ -26,3 +26,13 @@ The protocol is fairly simple and contains only a few commands. All commands hav
 
 <sup>[1]</sup> A mutexgroup is a group of cuelists from which only one cuelist can play at any given time. If one cuelist in the group is playing and another is started, the original cuelist is stopped automatically and the new cuelist plays.
 
+## Configuration
+1. Copy & paste or import the script into your show file.
+
+2. Add an initialization trigger that runs the script on startup.
+
+3. Manually run the script (this only needs to happen the first time you add it to your show. After that it should start when the show gets loaded).
+
+4. Configure a UDP or Serial port device in the device manager.
+
+5. Profit. (The script will respond to any installed UDP/Serial devices).
