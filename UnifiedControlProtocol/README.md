@@ -23,5 +23,6 @@ The protocol is fairly simple and contains only a few commands. All commands hav
 |IN		| 1 - Fader Index <br>`0 = Grandmaster` <br>2 - Level (0-100) | Set the level of a fader. | Grandmaster to 50%: `IN000050\r\n` <br><br> Versatile master 3 to 100%: `IN003100\r\n`
 |AF		| 1 - Fader Index <br>`0 = Grandmaster` <br><br>2 - Level (0-100) <br><br> 3 - Fade time| Slide a fader to a new value over a specified amount of time	| Grandmaster to 50% in 3 seconds: `IN000050003\r\n` <br><br>Versatile Master  5 to 80% in 2 seconds: `IN005080002\r\n`
 |ST		| 1 - Cuelist Index	|Stop cuelist. <br><br>If the index is 0, all cuelists will be stopped. | Stop All Cuelists: `ST000\r\n`<br><br>Stop cuelist 22: `ST022\r\n`
+
 <sup>[1]</sup> A mutexgroup is a group of cuelists from which only one cuelist can play at any given time. If one cuelist in the group is playing and another is started, the original cuelist is stopped automatically and the new cuelist plays.
 
