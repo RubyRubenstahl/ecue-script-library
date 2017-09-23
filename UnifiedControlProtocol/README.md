@@ -1,11 +1,11 @@
-#Unified Control Protocol
+# Unified Control Protocol
 The unfied control protocol emulates the RS232 control protocol of the Butler XT2, bringing the same command structure to be used in e:cue Programmer over UDP. This allows for a unified programming experience across devices. 
 
 In addition to the commands supported by the Butler XT2, there are several additional commands providing access to features of programmer that are not available in the XT2 standalone mode. 
 
 
 
-##Protocol Details
+## Protocol Details
 The protocol is fairly simple and contains only a few commands. All commands have the following aspecs in common: 
 - Each command starts with a two-letter command code
 - Each command has one or two 3-digit prameter with [leading 0's](https://en.wikipedia.org/wiki/Leading_zero)
