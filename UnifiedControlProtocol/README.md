@@ -15,7 +15,7 @@ The protocol is fairly simple and contains only a few commands. All commands hav
 |Command Code	|Parameters			|Action					|Example
 |-----|-------------------|-----------------------|--------------
 |PC		| 1 - Cuelist Index	| Play cuelist			| Play cuelist 5: `PC005\r\n`
-|PQ		| 1 - Cuelist Index	<br> 2- Cue Number| Play a specific cue			| Play cuelist 3, Cue 2: `PC003002\r\n`
+|PQ		| 1 - Cuelist Index	<br> 2- Cue Number| Play a specific cue			| Play cuelist 3, Cue 2: `PQ003002\r\n`
 |TP		| 1 - Cuelist Index	| Toggle cuelist on/off | Toggle cuelist 3: `TP003\r\n`
 |PP		| 1 - Cuelist Index | Toggle cuelist play/pause| Toggle cuelist 35 pause: `PP035\r\n`
 |NX		| 1 - Mutex Group Index| Play the next cuelist in a *mutex group*<sup>1</sup>| Play next cue in *mutex group* 3: `NX003\r\n`
