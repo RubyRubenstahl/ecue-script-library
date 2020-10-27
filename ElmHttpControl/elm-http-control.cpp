@@ -28,14 +28,27 @@
 // be set using the built-in HTTP driver and specfic headers are required for the ELM
 // functionality to work properly.
 
-int elmHttp = DriverGetHandle("elm");
+
+
+// ----------------- USER EDITABLE VARIABLES ------------------------
+
+// The alias name of the TCP driver to use
+string DRIVER_ALIAS = "elm"
+
+// Number of cuelists to scan. Higher numbers could lead to 
+// performance problems on processor intensive shows. 
+int CUELIST_COUNT = 256;
+
+// ----------------- DO NOT EDIT BELOW THIS POINT ------------------------
+
+int elmHttp = DriverGetHandle(DRIVER_ALIAS);
 
 int packet = BobAllocate(15000);
 int headerCursor = 0;
 int cursor = 0;
 
-int prevCues[100];
-int prevCueLevels[100];
+int prevCues[CUELIST_COUNT];
+int prevCueLevels[CUELIST_COUNT];
 string POST = "POST";
 
 function newPacket()
@@ -137,7 +150,7 @@ function updatePlayState()
     string qlName;
     string prefix;
     string stageName;
-    for (i = 0; i < 50; i++)
+    for (i = 0; i < CUELIST_COUNT; i++)
     {
         qlName = CuelistGetName(i);
         if (isElmCuelist(qlName))
